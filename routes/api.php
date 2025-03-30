@@ -9,4 +9,11 @@ use App\Http\Controllers\Api\SclassController;
 //     return $request->user();
 // });
 
+
+// Student Class Routes
+
 Route::get('/class', [SclassController::class, 'Index']);
+Route::post('/class/store', [SclassController::class, 'Store']);
+Route::get('/class/edit/{id}', [SclassController::class, 'Edit']);
+Route::post('/class/update/{id}', [SclassController::class, 'Update']);
+Route::delete('/class/delete/{id}', [SclassController::class, 'Delete']);
